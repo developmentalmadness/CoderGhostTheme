@@ -3,6 +3,23 @@
 <div class="blog-description col-md-12">
 <h1>{{@blog.description}}</h1>
 </div>
+
+<div class="googlesearch">
+    <script>
+    (function() {
+        var cx = '015156014150138090976:qsbbh7wiks0';
+        var gcse = document.createElement('script');
+        gcse.type = 'text/javascript';
+        gcse.async = true;
+        gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+            '//cse.google.com/cse.js?cx=' + cx;
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(gcse, s);
+    })();
+    </script>
+    <gcse:search></gcse:search>
+</div>
+
 {{! The main content area on the homepage }}
 {{! The tag below includes the post loop - partials/loop.hbs }}
 {{> "loop"}}
