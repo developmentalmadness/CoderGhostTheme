@@ -3,7 +3,15 @@
 </div>
 <h5>{{@blog.title}}</h5>
 <hr>
+{{#if @blog.navigation}}
+    {{navigation}}
+{{/if}}
+<hr>
 <ul class="list-unstyled menu">
+    <li>
+        <a class="subscribe-button icon-feed" href="{{@blog.url}}/rss/">
+        <i class="el el-rss"></i> Subscribe</a>
+    </li>
     <li>
         <a href="https://github.com/developmentalmadness" target="_blank">
          <i class="el el-github"></i> GitHub
@@ -11,7 +19,7 @@
     </li>
     <li>
         <a href="https://twitter.com/dvMENTALmadness" target="_blank">
-            <i class="el el-twitter"></i> @notmilobejda
+            <i class="el el-twitter"></i> @dvMENTALmadness
         </a>
     </li>
 </ul>

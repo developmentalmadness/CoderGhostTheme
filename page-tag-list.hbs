@@ -1,0 +1,33 @@
+
+{{!< default}}
+
+{{#contentFor "initHighlight"}}
+    <script>hljs.initHighlightingOnLoad();</script>
+{{/contentFor}}
+
+
+
+<main class="container" role="main">
+
+    <article class="{{post_class}}">
+    {{#post}}
+
+        <h1 class="title">{{title}}</h1>
+
+        <section>
+{{#get "tags" limit="all" include="count.posts" order="name"}}
+    <ul class="list-unstyled">
+      {{#foreach tags}}
+        {{#if count.posts}}
+          <li><a href="/tag/{{slug}}">{{name}} ({{count.posts}})</a></li>
+        {{/if}}
+      {{/foreach}}
+    </ul>
+{{/get}}
+            {{! content}}
+        </section>
+
+    {{/post}}
+    </article>
+
+</main>
